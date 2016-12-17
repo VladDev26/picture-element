@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		*{margin: 0;padding: 0;}
+		body{background: #2a2b32; color:#fff;}
+
+		picture img{width: 100%;}
+	</style>
+
+	<script>
+		document.createElement("picture");
+	</script>
+	<script src="https://cdn.rawgit.com/scottjehl/picturefill/3.0.2/dist/picturefill.min.js" async></script>
+</head>
+<body>
+
+<!-- MAX WIDTH VERSION -->
+<picture>
+	<!--[if IE 9]><video style="display: none;"><![endif]-->
+	<source srcset="banner-xs.jpg" media="(max-width: 480px)">
+	<source srcset="banner-md.jpg" media="(max-width: 768px)">
+	<!--[if IE 9]></video><![endif]-->
+
+	<img src="banner.jpg" alt="banner">
+</picture>
+
+
+
+<!-- MIN WIDTH VERSION -->
+<picture>
+	<!--[if IE 9]><video style="display: none;"><![endif]-->
+	<source srcset="banner.jpg" media="(min-width: 768px)">
+	<source srcset="banner-md.jpg" media="(min-width: 480px)">
+	<!--[if IE 9]></video><![endif]-->
+
+	<img src="banner-xs.jpg" alt="banner">
+</picture>
+
+</body>
+</html>
